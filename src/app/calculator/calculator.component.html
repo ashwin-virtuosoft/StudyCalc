@@ -1,0 +1,71 @@
+<h1 align="center">Sample Calculator</h1>
+<h3>Hai : {{this.name}}</h3>
+<button class="btn1" (click)="Test()">Click Me</button>
+<button class="btn1" (click)="Test1()">Click Me</button>
+<p>{{this.test}}</p>
+<div class="container">
+    <div class="display">
+        <form action="" [formGroup]="inputStr">
+            <input class="input" type="text" formControlName="text">
+        </form>
+    </div>
+    <div class="buttons">
+        <div class="operators">
+            <button (click)="performOperation('+')" class="btnOperators">+</button>
+            <button (click)="performOperation('-')" class="btnOperators">-</button>
+            <button (click)="performOperation('/')" class="btnOperators">/</button>
+            <button (click)="performOperation('*')" class="btnOperators">*</button>
+            <button (click)="performOperation('%')" class="btnOperators">%</button>
+           
+        </div>
+    </div>
+    <div class="buttons">
+        <div class="operators">
+            <button (click)="clearDisplay()" class="btnOperators">Clear</button>
+            <button (click)="deleteLast()" class="btnOperators">Del</button>
+            <button (click)="valuePi()"  class="btnOperators">π</button>
+            <button (click)="Cube()"  class="btnOperators">X^3 </button>
+            <button (click)="Square()"  class="btnOperators">X²</button>
+        </div>
+    </div>
+        
+  <div class="operands-row">
+    <div class="col-auto">
+        <button (click)="buttonClick($event.target)" class="btn">1</button>
+        <button (click)="buttonClick($event.target)" class="btn">2</button>
+        <button (click)="buttonClick($event.target)" class="btn">3</button>
+        <button (click)="buttonClick($event.target)" class="btn">4</button>
+       
+        <button (click)="Factorial()"  class="btnOperators">!(x)</button>
+    </div>
+  </div>
+  <div class="operands-row">
+    <div class="col-auto">
+        
+        <button (click)="buttonClick($event.target)" class="btn">5</button>
+        <button (click)="buttonClick($event.target)" class="btn">6</button>
+        <button (click)="buttonClick($event.target)" class="btn">7</button>
+        <button (click)="buttonClick($event.target)" class="btn">8</button>
+        <button (click)="valueRoot()"  class="btnOperators">√x</button>
+        
+      
+      
+    </div>
+    <div class="operands-row">
+        <div class="col-auto">  
+            <button (click)="buttonClick($event.target)" class="btn">9</button>
+            <button (click)="buttonClick($event.target)" class="btn">0</button>
+            <button (click)="buttonClick($event.target)" class="btn">(</button>
+            <button (click)="buttonClick($event.target)" class="btn">)</button>
+            <button (click)="valueSin()" class="btnOperators">Sin</button>
+            
+            
+        </div>
+        <button (click)="buttonClick($event.target)" class="btn">.</button>
+        <button (click)="calculate()" class="btnEqual">Ans =</button>
+        <button (click)="valueTan()" class="btnOperators">Tan</button>     
+        <button (click)="valueCos()" class="btnOperators">Cos</button>
+        <button (click)="valueExp()" class="btnOperators">Exp</button>
+        
+        
+</div>
